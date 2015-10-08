@@ -26,6 +26,6 @@ RUN useradd \
   && rm -rf /var/lib/apt/lists/* \
   && mkdir /var/lib/apt/lists/partial
 
-COPY cupsd.conf /etc/cups/cupsd.conf
+COPY etc-cups/cupsd.conf /etc/cups/cupsd.conf
 EXPOSE 631
 ENTRYPOINT ["/usr/sbin/cupsd", "-f"]
