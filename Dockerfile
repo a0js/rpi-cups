@@ -3,11 +3,19 @@ MAINTAINER Ammon Sarver <manofarms@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update \
-  && apt-get install -y sudo locales whois cups cups-client cups-bsd \
-  && apt-get install -y printer-driver-all \
-  && apt-get install -y hpijs-ppds hp-ppd hplip \
-  && sed -i "s/^#\ \+\(en_US.UTF-8\)/\1/" /etc/locale.gen \
+RUN apt-get update && apt-get install -y \
+  sudo \
+  locales \
+  whois \
+  cups \
+  cups-client \
+  cups-bsd \
+  printer-driver-all \
+  hpijs-ppds \
+  hp-ppd \
+  hplip 
+
+RUN sed -i "s/^#\ \+\(en_US.UTF-8\)/\1/" /etc/locale.gen \
   && locale-gen en_US en_US.UTF-8
 
 ENV LANG=en_US.UTF-8 \
