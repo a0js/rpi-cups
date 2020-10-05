@@ -1,5 +1,5 @@
-FROM resin/rpi-raspbian
-MAINTAINER Ammon Sarver <manofarms@gmail.com>
+FROM arm32v7/debian:latest
+MAINTAINER Luca Amoriello <luca.amoriello@hotmail.it>
 
 ENV DEBIAN_FRONTEND noninteractive
 
