@@ -3,7 +3,7 @@ name: Push docker image to the registry
 on:
   push:
     branches:
-       - main
+       - master
 
 jobs:
   publish-docker-image:
