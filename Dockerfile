@@ -1,4 +1,4 @@
-FROM arm32v7/debian:latest
+FROM arm32v7/debian:stable-slim
 MAINTAINER Luca Amoriello <luca.amoriello@hotmail.it>
 
 ENV DEBIAN_FRONTEND noninteractive
