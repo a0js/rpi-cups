@@ -24,6 +24,6 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: lucaam/rpi-cups:latest
+          tags: ghcr.io/lucaam/rpi-cups:latest
         
             
